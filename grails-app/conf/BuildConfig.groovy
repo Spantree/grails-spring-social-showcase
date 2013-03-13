@@ -18,6 +18,8 @@ grails.project.dependency.resolution = {
   }
   dependencies {}
   plugins {
+    runtime ":hibernate:$grailsVersion"
+    runtime ":tomcat:$grailsVersion"
     //compile(":twitter-bootstrap:1.3.0.7")
     compile(":spring-security-core:1.2.4")
     compile(":spring-social-core:0.1.31")
