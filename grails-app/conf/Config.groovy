@@ -108,10 +108,12 @@ log4j = {
 //Configuration for twitter
 grails.plugins.springsocial.twitter.consumerKey = "mcBxpCFGwS9gW5NbF4AZZg"
 grails.plugins.springsocial.twitter.consumerSecret = "q91y7MQwcQVbugnrMXlc83YupMjZzuEvM5o0XIiSupI"
+grails.plugins.springsocial.twitter.page.handleSignIn = "/register/twitter"
 
 //Configuration for facebook
 grails.plugins.springsocial.facebook.clientId = "101918953236251"
 grails.plugins.springsocial.facebook.clientSecret = "73b06ad466e900d07f5555062068b572"
+grails.plugins.springsocial.facebook.page.handleSignIn = "/register/facebook"
 
 // Added by the Spring Security Core plugin:
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.synergyj.grails.plugins.springsocial.showcase.User'

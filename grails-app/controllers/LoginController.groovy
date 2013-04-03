@@ -50,8 +50,18 @@ class LoginController {
 
     String view = 'auth'
     String postUrl = "${request.contextPath}${config.apf.filterProcessesUrl}"
-    render view: view, model: [postUrl: postUrl,
-        rememberMeParameter: config.rememberMe.parameter]
+	
+	Map providerUrls = [:]
+	
+	["facebook", "twitter"].each { provider ->
+		providerUrls[provider] = "${request.contextPath}/sssignin/${provider}"
+	}
+	
+    render view: view, model: [
+		postUrl: postUrl,
+		providerUrls: providerUrls,
+        rememberMeParameter: config.rememberMe.parameter
+	]
   }
 
   /**

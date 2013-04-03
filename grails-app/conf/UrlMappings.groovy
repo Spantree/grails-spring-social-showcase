@@ -11,5 +11,10 @@ class UrlMappings {
     "/facebook"(controller: "demo", action: "/fb")
     "/twitter"(controller: "demo", action: "/tw")
     "500"(view: '/error')
+	
+	name springSocialRegister: "/register/$providerId" {
+		controller = 'register'
+		action = [GET: "oauthCallback", POST: 'register']
+	}
   }
 }
