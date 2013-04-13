@@ -53,7 +53,7 @@ class LoginController {
 	
 	Map providerUrls = [:]
 	
-	["facebook", "twitter"].each { provider ->
+	["facebook", "twitter", "linkedin"].each { provider ->
 		providerUrls[provider] = "${request.contextPath}/sssignin/${provider}"
 	}
 	

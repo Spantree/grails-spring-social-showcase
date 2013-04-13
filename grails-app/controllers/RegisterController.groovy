@@ -3,6 +3,7 @@ import grails.plugins.springsocial.connect.web.GrailsConnectSupport
 import org.springframework.social.connect.ConnectionFactoryLocator
 import org.springframework.social.connect.UserProfile
 import org.springframework.social.connect.web.ProviderSignInAttempt
+import org.springframework.social.linkedin.api.LinkedIn
 import org.springframework.social.twitter.api.Twitter
 
 
@@ -14,6 +15,7 @@ class RegisterController {
 	def requestCache
 	GrailsConnectSupport webSupport = new GrailsConnectSupport(mapping: "springSocialRegister")
 	Twitter twitter
+	LinkedIn linkedin
 	
 	
 	def oauthCallback() {

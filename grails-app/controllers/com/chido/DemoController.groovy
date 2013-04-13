@@ -11,4 +11,8 @@ class DemoController {
   def tw = {
     render view: 'twitter'
   }
+  
+  def ln = {
+	  render view: 'linkedin'
+	}
 }

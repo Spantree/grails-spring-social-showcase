@@ -15,8 +15,17 @@ grails.project.dependency.resolution = {
     grailsPlugins()
     grailsHome()
     grailsCentral()
+	
+	mavenLocal()
+    mavenCentral()
+
+    mavenRepo "http://maven.springframework.org/release"
+    mavenRepo "http://maven.springframework.org/snapshot"
+    mavenRepo "http://maven.springframework.org/milestone"
   }
-  dependencies {}
+  dependencies {
+	  compile("org.springframework.social:spring-social-linkedin:1.0.0.RC1") { transitive = false }
+  }
   plugins {
     runtime ":hibernate:$grailsVersion"
     runtime ":tomcat:$grailsVersion"
@@ -25,5 +34,6 @@ grails.project.dependency.resolution = {
     compile(":spring-social-core:0.1.31")
     compile(":spring-social-twitter:0.1.31")
     compile(":spring-social-facebook:0.1.32")
+	compile(":grails-spring-social-linked-in:0.1.31")
   }
 }
